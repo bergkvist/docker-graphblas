@@ -3,6 +3,14 @@ https://hub.docker.com/repository/docker/bergkvist/lib-lagraph
 
 The image is only 70MB, meaning it doesn't take very long to download. It inherits from the empty "scratch" image, meaning it contains nothing except the compiled binaries and header files as you can see below.
 
+## Usage:
+```Dockerfile
+FROM <any-base-image>
+
+# Copy the binaries into your image of choice
+COPY --from=bergkvist/lib-lagraph:latest / /
+```
+
 ## Contents of image
 ```
 /usr/local/lib/
@@ -18,12 +26,3 @@ The image is only 70MB, meaning it doesn't take very long to download. It inheri
   - GraphBLAS.h
   - LAGraph.h
 ```
-
-## Usage:
-```Dockerfile
-FROM <any-base-image>
-
-# Copy the binaries into your image of choice
-COPY --from=bergkvist/lib-lagraph:latest / /
-```
-
