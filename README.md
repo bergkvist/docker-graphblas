@@ -9,6 +9,9 @@ FROM <any-base-image>
 
 # Copy the binaries into your image of choice
 COPY --from=bergkvist/lib-lagraph:latest / /
+
+# Refresh the shared library cache
+RUN sudo ldconfig
 ```
 
 ## Contents of image
