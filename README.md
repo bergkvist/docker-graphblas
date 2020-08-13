@@ -1,31 +1,8 @@
 # LAGraph and GraphBLAS binaries for Docker containers
-https://hub.docker.com/repository/docker/bergkvist/lib-lagraph
 
-The image is only 70MB, meaning it doesn't take very long to download. It inherits from the empty "scratch" image, meaning it contains nothing except the compiled binaries and header files as you can see below.
+- https://hub.docker.com/repository/docker/graphblas/graphblas (in case you only want graphblas)
+- https://hub.docker.com/repository/docker/graphblas/lagraph (contains graphblas)
 
-## Usage:
-```Dockerfile
-FROM <any-base-image>
+These images are not supposed to be used standalone, but rather to be copied into your image of choice.
 
-# Copy the binaries into your image of choice
-COPY --from=bergkvist/lib-lagraph:latest / /
-
-# Refresh the shared library cache
-RUN sudo ldconfig
-```
-
-## Contents of image
-```
-/usr/local/lib/
-  - libgraphblas.so.3.3.3
-  - libgraphblas.so.3
-  - libgraphblas.so
-  - liblagraph.so.0.1.0
-  - liblagraph.so.0
-  - liblagraph.so
-  - liblagraph.a
-
-/usr/local/include/
-  - GraphBLAS.h
-  - LAGraph.h
-```
+For more information, see [graphblas README](./graphblas/README.md) and [lagraph README](./lagraph/README.md)
