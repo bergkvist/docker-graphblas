@@ -6,7 +6,7 @@
 FROM <any-base-image>
 
 # Copy the binaries into your image of choice
-COPY --from=graphblas/graphblas:v3.3.3
+COPY --from=graphblas/graphblas:v3.3.3 / /
 
 # Make sure you are a root user when refreshing the shared library cache
 RUN ldconfig
