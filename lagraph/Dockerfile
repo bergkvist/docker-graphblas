@@ -10,7 +10,6 @@ WORKDIR /home/build
 RUN wget https://github.com/GraphBLAS/LAGraph/archive/$VERSION.tar.gz
 RUN tar -xf $VERSION.tar.gz
 
-RUN apt-get install -yq 
 WORKDIR /home/build/LAGraph-$VERSION
 RUN make JOBS=8 && make install
 
