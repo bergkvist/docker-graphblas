@@ -41,3 +41,17 @@ drwxr-xr-x         0:0     109 MB          └── lib
 -rwxrwxrwx         0:0        0 B              ├── libgraphblas.so.4 → libgraphblas.so.4.0.0
 -rw-r--r--         0:0     109 MB              └── libgraphblas.so.4.0.0
 ```
+
+### v4.0.0draft5 -- pre-release
+
+```
+Permission     UID:GID       Size  Filetree
+drwxr-xr-x         0:0     448 MB  └── usr
+drwxr-xr-x         0:0     448 MB      └── local
+drwxr-xr-x         0:0     441 kB          ├── include
+-rw-r--r--         0:0     441 kB          │   └── GraphBLAS.h
+drwxr-xr-x         0:0     448 MB          └── lib
+-rwxrwxrwx         0:0        0 B              ├── libgraphblas.so → libgraphblas.so.4
+-rwxrwxrwx         0:0        0 B              ├── libgraphblas.so.4 → libgraphblas.so.4.0.0
+-rw-r--r--         0:0     448 MB              └── libgraphblas.so.4.0.0
+```
