@@ -16,7 +16,26 @@ RUN ldconfig
 
 ## Contents of image
 
-### 13June2020 (GraphBLAS v3.3.3) -- latest
+### 4Jan2021 (GraphBLAS v4.0.1) -- latest
+
+```
+Permission     UID:GID       Size  Filetree
+drwxr-xr-x         0:0     137 MB  └── usr
+drwxr-xr-x         0:0     137 MB      └── local
+drwxr-xr-x         0:0     471 kB          ├── include
+-rw-r--r--         0:0     408 kB          │   ├── GraphBLAS.h                        
+-rw-r--r--         0:0      63 kB          │   └── LAGraph.h                                
+drwxr-xr-x         0:0     137 MB          └── lib                      
+-rwxrwxrwx         0:0        0 B              ├── libgraphblas.so → libgraphblas.so.4
+-rwxrwxrwx         0:0        0 B              ├── libgraphblas.so.4 → libgraphblas.so.4.0.1
+-rw-r--r--         0:0     136 MB              ├── libgraphblas.so.4.0.1                
+-rw-r--r--         0:0     692 kB              ├── liblagraph.a       
+-rwxrwxrwx         0:0        0 B              ├── liblagraph.so → liblagraph.so.0
+-rwxrwxrwx         0:0        0 B              ├── liblagraph.so.0 → liblagraph.so.0.3.0
+-rw-r--r--         0:0     354 kB              └── liblagraph.so.0.3.0
+```
+
+### 13June2020 (GraphBLAS v3.3.3)
 
 ```
 Permission     UID:GID       Size  Filetree
@@ -34,6 +53,8 @@ drwxr-xr-x         0:0      72 MB          └── lib
 -rwxrwxrwx         0:0        0 B              ├── liblagraph.so.0 → liblagraph.so.0.1.0
 -rw-r--r--         0:0     435 kB              └── liblagraph.so.0.1.0
 ```
+
+<details><summary>Pre-releases</summary>
 
 ### 8Aug2020 (GraphBLAS v4.0.0draft4) -- pre-release
 
@@ -53,3 +74,5 @@ drwxr-xr-x         0:0     110 MB          └── lib
 -rwxrwxrwx         0:0        0 B              ├── liblagraph.so.0 → liblagraph.so.0.1.0
 -rw-r--r--         0:0     431 kB              └── liblagraph.so.0.1.0
 ```
+
+</details>

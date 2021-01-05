@@ -2,8 +2,8 @@ FROM ubuntu:20.04 as builder
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -yq cmake make wget g++
 
-ARG VERSION=8Aug2020
-COPY --from=graphblas/graphblas:v4.0.0draft4 / /
+ARG VERSION=4Jan2021
+COPY --from=graphblas/graphblas:v4.0.1 / /
 RUN ldconfig
 
 WORKDIR /home/build
