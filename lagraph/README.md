@@ -8,7 +8,7 @@ This depends on/comes with the correct GraphBLAS version.
 FROM <any-base-image>
 
 # Copy the binaries into your image of choice
-COPY --from=graphblas/lagraph:13June2020 / /
+COPY --from=graphblas/lagraph:4Jan2021 / /
 
 # Make sure you are a root user when refreshing the shared library cache
 RUN ldconfig
