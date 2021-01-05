@@ -6,7 +6,7 @@
 FROM <any-base-image>
 
 # Copy the binaries into your image of choice
-COPY --from=graphblas/graphblas:v3.3.3 / /
+COPY --from=graphblas/graphblas:v4.0.1 / /
 
 # Make sure you are a root user when refreshing the shared library cache
 RUN ldconfig
@@ -14,7 +14,20 @@ RUN ldconfig
 
 ## Contents of image
 
-### v3.3.3 -- latest
+### v4.0.1 -- latest
+```
+Permission     UID:GID       Size  Filetree
+drwxr-xr-x         0:0     136 MB  └── usr
+drwxr-xr-x         0:0     136 MB      └── local
+drwxr-xr-x         0:0     408 kB          ├── include
+-rw-r--r--         0:0     408 kB          │   └── GraphBLAS.h                        
+drwxr-xr-x         0:0     136 MB          └── lib                                          
+-rwxrwxrwx         0:0        0 B              ├── libgraphblas.so → libgraphblas.so.4
+-rwxrwxrwx         0:0        0 B              ├── libgraphblas.so.4 → libgraphblas.so.4.0.1
+-rw-r--r--         0:0     136 MB              └── libgraphblas.so.4.0.1
+```
+
+### v3.3.3
 
 ```
 Permission     UID:GID       Size  Filetree
@@ -27,6 +40,8 @@ drwxr-xr-x         0:0      71 MB          └── lib
 -rwxrwxrwx         0:0        0 B              ├── libgraphblas.so.3 → libgraphblas.so.3.3.3
 -rw-r--r--         0:0      71 MB              └── libgraphblas.so.3.3.3
 ```
+
+<details><summary>Pre-releases</summary>
 
 ### v4.0.0draft4 -- pre-release
 
@@ -55,3 +70,5 @@ drwxr-xr-x         0:0     448 MB          └── lib
 -rwxrwxrwx         0:0        0 B              ├── libgraphblas.so.4 → libgraphblas.so.4.0.0
 -rw-r--r--         0:0     448 MB              └── libgraphblas.so.4.0.0
 ```
+
+</details>

@@ -2,7 +2,7 @@ FROM ubuntu:20.04 as builder
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -yq cmake make wget
 
-ARG VERSION=4.0.0draft5
+ARG VERSION=4.0.1
 
 WORKDIR /home/build
 RUN wget https://github.com/DrTimothyAldenDavis/GraphBLAS/archive/v$VERSION.tar.gz
